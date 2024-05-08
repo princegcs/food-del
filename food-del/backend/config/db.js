@@ -1,7 +1,14 @@
 import mongoose from "mongoose";
 
 export const connectDB = async () => {
-  await mongoose
-    .connect("mongodb://localhost:27017/food-del")
-    .then(() => console.log("DB Connected"));
+  try {
+    await mongoose.connect(process.env.MONGO, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("MongoDB Connected");
+  } catch (err) {
+    console.error("Error connecting to MongoDB:", err.message);
+    process.exit(1); // Exit process with failure
+  }
 };
