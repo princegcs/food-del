@@ -2,18 +2,18 @@
     "services": [
       {
         "name": "backend",
-        "buildCommand": "npm install && npm run build",
-        "startCommand": "npm run server"
+        "buildCommand": "cd path/to/backend && npm install && npm run build",
+        "startCommand": "cd path/to/backend && npm run server"
       },
       {
         "name": "frontend",
-        "buildCommand": "npm install && npm run build",
-        "startCommand": "npm run dev"
+        "buildCommand": "cd path/to/frontend && npm install && npm run build",
+        "startCommand": "cd path/to/frontend && npm run dev"
       },
       {
         "name": "admin",
-        "buildCommand": "npm install && npm run build",
-        "startCommand": "npm run dev"
+        "buildCommand": "cd path/to/admin && npm install && npm run build",
+        "startCommand": "cd path/to/admin && npm run dev"
       }
     ]
   }
